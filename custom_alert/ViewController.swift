@@ -25,10 +25,9 @@ class ViewController: UIViewController {
         
         let sliderBtn = UIButton(type: .system)
         
-        sliderBtn.frame = CGRect(x: 100, y: 400, width: 200, height: 50)
+        sliderBtn.frame = CGRect(x: 100, y: 400, width: 250, height: 50)
         sliderBtn.setTitle("버튼을 누르면 슬라이더가 나옵니다.", for: .normal)
         sliderBtn.center.x = self.view.frame.width / 2
-        sliderBtn.titleLabel?.sizeToFit()
         
         sliderBtn.addTarget(self, action: #selector(pushSlider(_:)), for: .touchUpInside)
         
