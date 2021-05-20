@@ -11,12 +11,13 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        /* 버튼 생성 */
         let setButton = UIButton(type: .system)
         
         setButton.frame = CGRect(x: 100, y: 200, width: 200, height: 50)
         setButton.setTitle("버튼을 누르면 알람이 등장해요", for: .normal)
         setButton.center.x = self.view.frame.width / 2
+        /* 버튼 누를시 메서드 동작 */
         setButton.addTarget(self, action: #selector(helloAlert(_:)), for: .touchUpInside)
         self.view.addSubview(setButton)
     }
@@ -29,7 +30,7 @@ class ViewController: UIViewController {
         
         let v = UIViewController()
         v.view.backgroundColor = .black
-        
+        /* label 설정 */
         let label = UILabel(frame: CGRect(x: 90, y: 45, width: 100, height: 30))
         label.text = "커스텀할 공간"
         label.textColor = .white
@@ -37,7 +38,7 @@ class ViewController: UIViewController {
         label.sizeToFit()
         
         v.view.addSubview(label)
-        
+        /* contentViewController에 뷰컨트롤러 넣기 */
         alert.setValue(v, forKey: "contentViewController")
         
         self.present(alert, animated: false)
